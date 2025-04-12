@@ -56,3 +56,5 @@ vim.opt.textwidth = 100
 
 -- Set show whitespace
 vim.wo.list = true
+
+vim.cmd.language = "en_US"
