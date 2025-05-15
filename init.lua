@@ -23,6 +23,7 @@ local _ = require("keybinds");
 
 -- import settings
 local _ = require("settings");
+local _ = require("lsp")
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
