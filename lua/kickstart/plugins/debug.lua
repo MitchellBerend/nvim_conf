@@ -16,7 +16,9 @@ return {
     'rcarriga/nvim-dap-ui',
 
     -- Installs the debug adapters for you
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
+    -- 'mason-org/mason-registry',
+
     'jay-babu/mason-nvim-dap.nvim',
 
     -- Add your own debuggers here
