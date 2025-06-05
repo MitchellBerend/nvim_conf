@@ -76,11 +76,7 @@ for _, pkg in ipairs(packages) do
 end
 vim.lsp.enable(config_keys)
 
-vim.diagnostic.config({
-  virtual_lines = {
-    current_line = true
-  },
-})
+vim.diagnostic.config({ virtual_text = true })
 
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*.go',

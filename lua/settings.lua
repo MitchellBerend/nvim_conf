@@ -1,3 +1,4 @@
+local vim = vim
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
