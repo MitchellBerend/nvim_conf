@@ -1,3 +1,4 @@
+local vim = vim
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
@@ -50,6 +51,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.cmd(":w")
         vim.cmd(":silent !ruff format " .. fileName)
       elseif fileName:match("%.vue$") or fileName:match("%.ts$") or fileName:match("%.js$") then
+        vim.cmd(":w")
         local command = "prettier --write " .. fileName
         vim.fn.system(command)
         vim.cmd("edit")

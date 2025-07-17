@@ -1,9 +1,13 @@
+local vim = vim
 local nmap = function(keybind, func, desc)
 	vim.api.nvim_set_keymap('n', keybind, func, { desc = desc })
 end
 
 local nmap_opt = function(keybind, func, opt)
 	vim.api.nvim_set_keymap('n', keybind, func, opt)
+end
+local vmap_opt = function(keybind, func, opt)
+	vim.api.nvim_set_keymap('v', keybind, func, opt)
 end
 
 local options = { noremap = true, silent = true }
@@ -76,3 +80,8 @@ nmap_opt('<A->>', '<Cmd>BufferMoveNext<CR>', options)
 -- Close tab
 nmap_opt('<A-c>', '<Cmd>BufferClose<CR>', options)
 nmap_opt('ç', '<Cmd>BufferClose<CR>', options)
+
+nmap_opt('<C-S-K>', ':m -2<CR>', { noremap = true, silent = true })
+nmap_opt('<C-S-J>', ':m +1<CR>', { noremap = true, silent = true })
+vmap_opt('<C-S-K>', ":m '<-2<CR>gv", { noremap = true, silent = true })
+vmap_opt('<C-S-J>', ":m '>+1<CR>gv", { noremap = true, silent = true })
