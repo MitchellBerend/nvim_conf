@@ -28,11 +28,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition', ev)
     nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences', ev)
-    nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation', ev)
+    nmap('gi', vim.lsp.buf.implementation, '[G]oto [I]mplementation', ev)
     nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition', ev)
     nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols', ev)
-    nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols,
-      '[W]orkspace [S]ymbols', ev)
+    nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols', ev)
 
     nmap_opt('K', vim.lsp.buf.hover, { buffer = ev.buf, desc = 'Hover Documentation' })
 
