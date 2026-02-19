@@ -52,8 +52,8 @@ vim.opt.scrolloff = 10
 -- Set a column at row 80
 vim.o.colorcolumn = "80"
 
--- Set line wrapping to 100 by default
-vim.opt.textwidth = 100
+-- Set line wrapping to 80 by default
+vim.opt.textwidth = 80
 
 -- Set show whitespace
 vim.wo.list = true

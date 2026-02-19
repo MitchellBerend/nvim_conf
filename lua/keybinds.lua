@@ -60,8 +60,6 @@ nmap_opt('<Up>', '<Nop>', { noremap = true })
 nmap_opt('<Down>', '<Nop>', { noremap = true })
 nmap_opt('<Left>', '<Nop>', { noremap = true })
 nmap_opt('<Right>', '<Nop>', { noremap = true })
--- Open Neotree
--- nmap_opt('<F1>', ':Neotree toggle<cr>', { noremap = true, desc = 'Toggle Neotree' })
 
 -- Tab keybinds
 -- Move to previous/next tab
